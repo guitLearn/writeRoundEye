@@ -25,9 +25,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         maindlg.cpp \
-        ccommaobj.cpp
+    common/ccommaobj.cpp
 
 HEADERS  += maindlg.h \
-    ccommaobj.h
+    common/ccommaobj.h
 
 FORMS    += maindlg.ui

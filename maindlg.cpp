@@ -1,6 +1,6 @@
 #include "maindlg.h"
 #include "ui_maindlg.h"
-#include "ccommaobj.h"
+#include "common/ccommaobj.h"
 #include <QPainter>
 #include <QPainterPath>
 
