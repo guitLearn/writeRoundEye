@@ -1,5 +1,6 @@
 #include "maindlg.h"
 #include "ui_maindlg.h"
+#include "ccommaobj.h"
 #include <QPainter>
 #include <QPainterPath>
 
@@ -73,13 +74,16 @@ void mainDlg::paintEvent(QPaintEvent *event)
     QPointF  c2Point;
     QPainterPath path2;
 
-    path2.setFillRule(Qt::WindingFill);
-    path2.moveTo(dlgCenterX + radius, dlgCenterY + radius * 2);
-    path2.arcTo(commaRectS, 0, - 90);
+   // path2.setFillRule(Qt::WindingFill);
+  //  path2.moveTo(dlgCenterX + radius, dlgCenterY + radius * 2);
+   // path2.arcTo(commaRectS, 0, - 90);
 
-    path2.arcTo(commaRectL, 270, 90);
-    path2.arcTo(commaRect, 0, 270);
+    //path2.arcTo(commaRectL, 270, 90);
+    //path2.arcTo(commaRect, 0, 270);
     //path2.closeSubpath();
 
+    CCommaObj commaObj;
+    QPointF commaCenter(dlgCenterX + radius, dlgCenterY + radius);
+    commaObj.paintOjb(path2, commaCenter, radius);
     painter.drawPath(path2);
 }
